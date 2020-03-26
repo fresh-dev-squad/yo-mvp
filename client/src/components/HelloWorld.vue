@@ -15,13 +15,13 @@ export default {
       const success = position => {
         const coordinates = position.coords;
 
-        console.log("Your current position is:");
-        console.log(`Latitude : ${coordinates.latitude}`);
-        console.log(`Longitude: ${coordinates.longitude}`);
+        alert("Your current position is:");
+        alert(`Latitude : ${coordinates.latitude}`);
+        alert(`Longitude: ${coordinates.longitude}`);
       };
 
       const failure = err => {
-        console.warn(`ERROR(${err.code}): ${err.message}`);
+        alert(`ERROR(${err.code}): ${err.message}`);
       };
 
       navigator.geolocation.getCurrentPosition(success, failure);
